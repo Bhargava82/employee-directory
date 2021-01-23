@@ -17,7 +17,7 @@ const Employee = () => {
             <i className="fad fa-address-book"></i> Employee Directory
           </h1>
           <p>
-            Sort by Last Name.
+            Search the Directory by Last Name.
           </p>
         </div>
       </>

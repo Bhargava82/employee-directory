@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Axios from "axios";
 import axios from "axios";
+import "./Table.css";
 
 // import React from 'react';
 
-const Table = () => {
+class Table extends Component {
     state = {
         employees: [],
         filteredEmployees: [],
@@ -13,11 +13,11 @@ const Table = () => {
     
     componentDidMount() {
         this.getEmployees();
-      }
+    }
 
     getEmployees = () => {
         axios.get("https://randomuser.me/api/?results=25")
-        .then((respond) => {
+        .then((response) => {
             this.setState({
                 employees: response.data.results,
                 filteredEmployees: response.data.results,
@@ -135,13 +135,7 @@ const Table = () => {
             </div>
           </div>
         );
-      }
-    }
-    
-        
-    
-
-
-};
+      };
+    };
 
 export default Table;
